@@ -12,7 +12,9 @@ from telegram.ext import ContextTypes as CT
 from telegram.ext import ConversationHandler, Defaults, MessageHandler, PicklePersistence
 from telegram.ext.filters import COMMAND, TEXT, User
 
-JUSTWATCH_LOGO_URL = "https://www.justwatch.com/appassets/img/JustWatch_logo_with_claim.png"
+JUSTWATCH_LOGO_URL = getenv(
+    "JUSTWATCH_LOGO_URL", "https://www.justwatch.com/appassets/img/JustWatch_logo_with_claim.png"
+)
 JUSTWATCH_SEARCH_WEBSITE_URL = "https://www.justwatch.com/{}/search?q={}"
 IMDB_DETAILS_ULR = "https://www.imdb.com/title/{}/"
 
